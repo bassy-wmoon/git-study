@@ -1,0 +1,3 @@
+git status
+git add <some-file>
+git commit
