@@ -42,3 +42,37 @@ git commit --allow-empty
 ```
 git push -u origin featureブランチ名
 ```
+
+## 変更を追加・コミットする
+
+1.git statusで変更を確認、git addでステージにファイルを追加、そしてコミットする。
+
+```
+git status
+git add <some-file>
+git commit
+```
+
+2.リモートへpushする。
+
+```
+git push
+```
+
+または
+
+```
+git push -u origin featureブランチ名
+```
+
+
+## リモートの変更を取り込む
+
+リモートからpullします。
+
+```
+git pull
+```
+
+devlopの変更をfeatureにマージします。
+
