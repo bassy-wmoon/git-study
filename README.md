@@ -12,6 +12,7 @@ gitフローの確認やgit操作についてお勉強しましょう。
 ## Gitフローとは
 
 A successful git branching modelに基づいたブランチ構成
+
 <http://www.slideshare.net/monochromegane/gitflow-13940105>
 
 
