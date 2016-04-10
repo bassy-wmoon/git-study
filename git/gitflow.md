@@ -74,5 +74,8 @@ git push -u origin featureブランチ名
 git pull
 ```
 
-devlopの変更をfeatureにマージします。
+カレントがfeatureの時に別のブランチの変更をfeatureにマージします。
 
+```
+git merge ブランチ名
+```
