@@ -65,6 +65,11 @@ git push
 git push -u origin featureブランチ名
 ```
 
+## リモートの変更をローカルに同期する
+
+```
+git fetch origin
+```
 
 ## リモートの変更を取り込む
 
