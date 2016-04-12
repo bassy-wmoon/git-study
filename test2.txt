@@ -1,0 +1,4 @@
+gitのステータスを確認し、追加し、コミットするコマンドです
+git status
+git add <some-file>
+git commit
