@@ -3,26 +3,29 @@
 # 0. 事前準備
 ## git cloneでローカルリポジトリ作成
 
-
-httpsだと上手くクローンできなかったのでメモ
+httpsでクローンする場合
 
 ```
 git clone https://github.com/user_account/repository_name.git
 ```
-始めこれでクローンしてみたら、
+
+sshでクローンする場合
+
+```
+git clone git@github.com:user_account/repositry_name.git
+```
+
+httpsでクローンしてこんなエラーが出た場合は、
 
 ```
 Cloning into 'repository_name'...
 fatal: unable to access 'https://github.com/XXXXXXX/git-study.git/': SSLRead()
 return error -9806
 ```
-という謎エラーが出たので、sshでクローンすることにした。
+sshでやってみよう。
 
-githubの[ヘルプ](https://help.github.com/articles/checking-for-existing-ssh-keys/)を参考にsshキーを登録することでクローンに成功。
+githubの[ヘルプ](https://help.github.com/articles/checking-for-existing-ssh-keys/)を参考にsshキーを登録するとよい。
 
-```
-git clone git@github.com:user_account/repositry_name.git
-```
 
 ## Homebrewをインストールしておく
 
