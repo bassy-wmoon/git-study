@@ -81,9 +81,9 @@ git checkout -b featureブランチ名 develop
 ```
 
 git checkoutはブランチを切り替える。
--bをつけるとブランチがない場合に新規作成して切り替える。
-第2引数に親ブランチを指定することもできる。
-featureはdevelopから作成するので上記のコマンドとなう。
+  -bをつけるとブランチがない場合に新規作成して切り替える。
+  第2引数に親ブランチを指定することもできる。
+  featureはdevelopから作成するので上記のコマンドとなう。
 
 
 2.featureを空コミットする
@@ -209,10 +209,10 @@ git flow feature publish myfeature
 
 3.ブラウザでプルリク作成
 
-# 別のfeatureをローカルに取り込むには
+## 別のfeatureをローカルに取り込むには
 
 このコマンドで別のfeatureをクローンする。
-ローカルで動作確認やレビューを実施したい場合に使おう。
+  ローカルで動作確認やレビューを実施したい場合に使おう。
 
 ```
 git flow feature track feature_name
@@ -222,14 +222,14 @@ git flow feature track feature_name
 ## featureの終了
 
 finishコマンドでfeatureからdevelopへマージし、ローカルのfeatureブランチを削除する。
-pushしてリモートを最新化する。
+  pushしてリモートを最新化する。
 
 ```
 git flow feature finish myfeature
 git push --all
 ```
 
-# リリースブランチ作成
+## リリースブランチ作成
 
 リリースブランチを作成する
 コマンドはfeatureの部分をreleaseに変えるだけ
@@ -244,8 +244,8 @@ git flow release start myrelease
 git flow release publish myrelease
 ```
 
-リリースブランチの終了とともに、masterにマージされる
-デフォルトだとmyreleaseがタグ名となる。
+リリースブランチの終了とともに、masterにマージされる。
+  デフォルトだとmyreleaseがタグ名となる。
 
 ```
 git flow release finish myrelease
@@ -263,6 +263,6 @@ git push --all
 git push origin --tags
 ```
 
-
+### リリース作業へ！
 
 
