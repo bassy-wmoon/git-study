@@ -3,26 +3,29 @@
 # 0. 事前準備
 ## git cloneでローカルリポジトリ作成
 
-
-httpsだと上手くクローンできなかったのでメモ
+httpsでクローンする場合
 
 ```
 git clone https://github.com/user_account/repository_name.git
 ```
-始めこれでクローンしてみたら、
+
+sshでクローンする場合
+
+```
+git clone git@github.com:user_account/repositry_name.git
+```
+
+httpsでクローンしてこんなエラーが出た場合は、
 
 ```
 Cloning into 'repository_name'...
 fatal: unable to access 'https://github.com/XXXXXXX/git-study.git/': SSLRead()
 return error -9806
 ```
-という謎エラーが出たので、sshでクローンすることにした。
+sshでやってみよう。
 
-githubの[ヘルプ](https://help.github.com/articles/checking-for-existing-ssh-keys/)を参考にsshキーを登録することでクローンに成功。
+githubの[ヘルプ](https://help.github.com/articles/checking-for-existing-ssh-keys/)を参考にsshキーを登録するとよい。
 
-```
-git clone git@github.com:user_account/repositry_name.git
-```
 
 ## Homebrewをインストールしておく
 
@@ -81,8 +84,11 @@ git checkout -b featureブランチ名 develop
 ```
 
 git checkoutはブランチを切り替える。
+  
 -bをつけるとブランチがない場合に新規作成して切り替える。
+  
 第2引数に親ブランチを指定することもできる。
+  
 featureはdevelopから作成するので上記のコマンドとなう。
 
 
@@ -209,10 +215,10 @@ git flow feature publish myfeature
 
 3.ブラウザでプルリク作成
 
-# 別のfeatureをローカルに取り込むには
+## 別のfeatureをローカルに取り込むには
 
 このコマンドで別のfeatureをクローンする。
-ローカルで動作確認やレビューを実施したい場合に使おう。
+  ローカルで動作確認やレビューを実施したい場合に使おう。
 
 ```
 git flow feature track feature_name
@@ -222,16 +228,47 @@ git flow feature track feature_name
 ## featureの終了
 
 finishコマンドでfeatureからdevelopへマージし、ローカルのfeatureブランチを削除する。
-pushしてリモートを最新化する。
+  pushしてリモートを最新化する。
 
 ```
 git flow feature finish myfeature
 git push --all
 ```
 
+## リリースブランチ作成
 
+リリースブランチを作成する
+コマンドはfeatureの部分をreleaseに変えるだけ
 
+```
+git flow release start myrelease
+```
 
+リリースブランチに修正がある場合はプルリクを作成する。
 
+```
+git flow release publish myrelease
+```
+
+リリースブランチの終了とともに、masterにマージされる。
+  デフォルトだとmyreleaseがタグ名となる。
+
+```
+git flow release finish myrelease
+```
+
+ブランチがmasterに切り替わるのでpushし、masterを最新化する。
+
+```
+git push --all
+```
+
+タグをリモートにpushする
+
+```
+git push origin --tags
+```
+
+### リリース作業へ！
 
 
