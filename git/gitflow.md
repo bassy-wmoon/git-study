@@ -229,8 +229,39 @@ git flow feature finish myfeature
 git push --all
 ```
 
+# リリースブランチ作成
 
+リリースブランチを作成する
+コマンドはfeatureの部分をreleaseに変えるだけ
 
+```
+git flow release start myrelease
+```
+
+リリースブランチに修正がある場合はプルリクを作成する。
+
+```
+git flow release publish myrelease
+```
+
+リリースブランチの終了とともに、masterにマージされる
+デフォルトだとmyreleaseがタグ名となる。
+
+```
+git flow release finish myrelease
+```
+
+ブランチがmasterに切り替わるのでpushし、masterを最新化する。
+
+```
+git push --all
+```
+
+タグをリモートにpushする
+
+```
+git push origin --tags
+```
 
 
 
