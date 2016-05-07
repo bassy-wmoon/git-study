@@ -1,6 +1,9 @@
 テスト
 テスト・テスト
+hotfixだよ
 feature06で追記
-テスト・テストfeature06で追記テスト・テスト
+テスト・hotfixだよテストfeature06で追記テスト・テスト
 テスト・テストテスト・テストテスト・テスト
+hotfixだよ
+hotfixだよ
 feature06で追記feature06で追記
