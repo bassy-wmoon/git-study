@@ -4,3 +4,7 @@ git add <some-file>
 git commit
 
 aaaaa
+feature05で追記
+feature05で追記
+feature06で追記
+feature06で追記

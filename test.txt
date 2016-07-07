@@ -1,7 +1,13 @@
 テスト
 テスト・テスト
+feature05で追記
+テスト・feature05で追記・テストテスト・テスト
+テスト・テストテスト・テストテスト・テスト
+feature05で追記feature05で追記
 hotfixだよ
-テスト・hotfixだよテストテスト・テスト
+feature06で追記
+テスト・hotfixだよテストfeature06で追記テスト・テスト
 テスト・テストテスト・テストテスト・テスト
 hotfixだよ
 hotfixだよ
+feature06で追記feature06で追記
